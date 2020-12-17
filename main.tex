@@ -71,7 +71,7 @@ El campo puede ser visto como una colección de osciladores discretos, la cuanti
 \section{Cuantización de campos escalares complejos}
 Para un campo escalar complejo de spin $0$, el campo complejo se pone en términos de 2 campos reales implicando que tiene dos grados de libertad internos $\phi =\varphi_1 + i\varphi_2$, pero podemos tomar como campos independientes $\phi$ y  $\phi^\dagger$. El lagrangiano esta dado por $\mathscr{L_{KG,c}}=\partial_\mu \phi^\dagger \partial^\mu \phi - m^2 \phi^\dagger \phi$. El siguiente proceso especifico de cuantizacion de este campo es tomado de \cite{Nagashima:2010}.
 Las cantidades físicas conservadas que son los operadores de energía (Hamiltoniano), momentum y carga (dicha carga surge de la simetría del grupo U(1)) son
-
+%
 \begin{equation}
   H= \sum p_r\dot{q}_r - L \rightarrow H=\pi(x) \dot{\phi} (x) - L = \iiint  d^3x \  [(\frac{\partial \phi^\dagger}{\partial t})(\frac{\partial \phi}{\partial t})+(\nabla \phi^\dagger \cdot \nabla \phi) + m^2 \phi^\dagger \phi]\,,
 \end{equation}
@@ -84,33 +84,32 @@ Las cantidades físicas conservadas que son los operadores de energía (Hamilton
 \end{equation}
 
 Ya que la ecuación de Klein-Gordon es una ecuación de onda con primeras derivadas, podemos expandir su solución  en la base de ondas planas con numero de onda $\overrightarrow{k}=\mathbf{k}$ 
-
+%
 \begin{equation}
   \phi(x) = \sum_{\mathbf{k}} q_{\mathbf{k}}(t) e^{i\mathbf{k} \cdot \mathbf{x}}.
 \end{equation}
 
 Al aplicarle la ecuación de Klein-Gordon a la expansión 
-
+%
 \begin{equation}
   [\partial_\mu \partial^\mu + m^2] \phi = \sum_{\mathbf{k}} (\ddot{q_{\mathbf{k}}} + w^2q_{\mathbf{k}}) e^{i\mathbf{k} \cdot \mathbf{x}} = 0\,, \ \ \ w=\sqrt{\mathbf{k}^2+m^2}\,,
 \end{equation}
-
-Vemos que el campo que satisface dicha ecuación es una suma de un numero infinito de osciladores con diferente numero de onda $\overrightarrow{k}$ (están diferentes modos de oscilación, diferentes frecuencias implica que son independientes unos de otros) por lo que los coeficientes son ondas con frecuencia $w$. Separando $q_\mathbf{k}$ en partes con frecuencia positiva y partes con frecuencia negativa
-
+%
+vemos que el campo que satisface dicha ecuación es una suma de un numero infinito de osciladores con diferente numero de onda $\mathbf{k}$ (están diferentes modos de oscilación, diferentes frecuencias implica que son independientes unos de otros) por lo que los coeficientes son ondas con frecuencia $w$. Separando $q_\mathbf{k}$ en partes con frecuencia positiva y partes con frecuencia negativa
+%
 \begin{equation}
   \phi(x) = \sum_{\mathbf{k}} \frac{1}{\sqrt{2wV}} (a_{\mathbf{k}}e^{-iwt}+c_{\mathbf{k}}e^{iwt}) e^{i\mathbf{k} \cdot \mathbf{x}}\,,
 \end{equation}
-
-Donde V es el volumen de normalización de la onda planas.
+donde V es el volumen de normalización de la onda planas.
 
 Si introducimos esta expansión en las expresiones para los operadores de Hamiltoniano, momentum y carga (Eqs. (2), (3) y (4) respectivamente) y usamos la relación de ortogonalidad de la base discreta entre $\mathbf{k}$ y $\mathbf{k'}$
-
+%
 \begin{equation}
   \frac{1}{V}\iiint  d^3x \   e^{i(\mathbf{k}-\mathbf{k'}) \cdot \mathbf{x}}=\delta_{\mathbf{kk'}}.
 \end{equation}
 
 Al multiplicar sumatorias, estas se ponen con diferentes índices $\mathbf{k}$ y $\mathbf{k'}$ y una de estas sumatorias desaparece al ser integradas en el espacio con la relación de ortogonalidad anterior. Se llega a 
-
+%
 \begin{equation}
   H = \sum_{\mathbf{k}} w[a_{\mathbf{k}}^\dagger a_{\mathbf{k}} + c_{\mathbf{k}}^\dagger c_{\mathbf{k}} ]\,,
 \end{equation}
@@ -124,74 +123,72 @@ Al multiplicar sumatorias, estas se ponen con diferentes índices $\mathbf{k}$ y
 \end{equation}
 
 Como el campo satisface  relaciones de conmutación canónicas en tiempos iguales los modos de Furier (los coeficientes operador-valuados de la expansión de Fourier) también deben satisfacer relaciones de conmutación:
-
+%
 \begin{equation}
   [a_{\mathbf{k}},a_{{\mathbf{k}}'}^\dagger] = \delta_{\mathbf{kk'}}\,, \ \  [c_{\mathbf{k}},c_{{\mathbf{k}}'}^\dagger] = \delta_{\mathbf{kk'}}\,, 
 \end{equation}
+%
+todos los demas conmutadores entre $a_{\mathbf{k}},a_{\mathbf{k}}^\dagger,c_{\mathbf{k}},c_{\mathbf{k}}^\dagger$ son cero. 
 
-Todos los demas conmutadores entre $a_{\mathbf{k}},a_{\mathbf{k}}^\dagger,c_{\mathbf{k}},c_{\mathbf{k}}^\dagger$ son cero. 
-
-Aquí $(a_{\mathbf{k}}^\dagger, a_{\mathbf{k}})$ se pueden interpretar como operadores de creación y aniquilación de una partícula con energía-momentum ($E=\hbar w \,, \ \mathbf{P}=\hbar \mathbf{k} $). Pero para la parte de frecuencia negativa,   $(c_{\mathbf{k}}^\dagger, c_{\mathbf{k}})$ son operadores de creación y aniquilación de una partícula con energía negativa,lo cual no es permitido ya que no debe haber partículas con energía negativa. Debemos examinar los efectos de aplicar estos operadores en vectores de estado. Definimos el operador numero N como
-
+Aquí $(a_{\mathbf{k}}^\dagger, a_{\mathbf{k}})$ se pueden interpretar como operadores de creación y aniquilación de una partícula con energía-momentum ($E=\hbar w \,, \ \mathbf{P}=\hbar \mathbf{k} $). Pero para la parte de frecuencia negativa,   $(c_{\mathbf{k}}^\dagger, c_{\mathbf{k}})$ son operadores de creación y aniquilación de una partícula con energía negativa, lo cual no es permitido ya que no debe haber partículas con energía negativa. Debemos examinar los efectos de aplicar estos operadores en vectores de estado. Definimos el operador numero $N$ como
+%
 \begin{equation}
   N= \sum_{\mathbf{k}}(a_{\mathbf{k}}^\dagger a_{\mathbf{k}} + c_{\mathbf{k}}^\dagger c_{\mathbf{k}} )\,,
 \end{equation}
-
-En analogía con el oscilador armónico (para el cual $N=a^\dagger a$) el operador numero es la sumatoria para los diferentes momentos $\mathbf{k}$ del producto anterior y del producto para la parte de las frecuencias negativas.
+en analogía con el oscilador armónico (para el cual $N=a^\dagger a$) el operador numero es la sumatoria para los diferentes momentos $\mathbf{k}$ del producto anterior y del producto para la parte de las frecuencias negativas.
 
 Usando las relaciones de conmutación Eq.(12) obtenemos las relaciones de conmutación entre N y $a_{\mathbf{k}},a_{\mathbf{k}}^\dagger,c_{\mathbf{k}},c_{\mathbf{k}}^\dagger$ 
-
+%
 \begin{equation}
   [N,a_{{\mathbf{k}}'}^\dagger] = a_{{\mathbf{k}}'}^\dagger\,, \ \  [N,a_{{\mathbf{k}}'}] = -a_{{\mathbf{k}}'}\,, 
 \end{equation}
-
+%
 \begin{equation}
   [N,c_{{\mathbf{k}}'}^\dagger] = c_{{\mathbf{k}}'}^\dagger\,, \ \  [N,c_{{\mathbf{k}}'}] = -c_{{\mathbf{k}}'}\,,
 \end{equation}
-
-Que muestran que $a_{{\mathbf{k}}'}^\dagger, c_{{\mathbf{k}}'}^\dagger$ se pueden interpretar como operadores de creación y $a_{{\mathbf{k}}'}, c_{{\mathbf{k}}'}$ operadores de aniquilación de partículas con momentum $\mathbf{k}$.
+%
+que muestran que $a_{{\mathbf{k}}'}^\dagger, c_{{\mathbf{k}}'}^\dagger$ se pueden interpretar como operadores de creación y $a_{{\mathbf{k}}'}, c_{{\mathbf{k}}'}$ operadores de aniquilación de partículas con momentum $\mathbf{k}$.
 
 En el cuadro de Heisenberg, los operadores evolucionan en el tiempo, si tomamos la evolución temporal del campo $\phi$ actuando sobre un autoestado de energía $|E\rangle$ de $H |E\rangle = E |E\rangle$
-
+%
 \begin{equation}
  \dot{\phi} |E\rangle = i[H,\phi] |E\rangle\,,
 \end{equation}
-
-Comparando los coeficientes de $e^{-iwt}$ y $e^{iwt}$ y usando las relaciones de conmutación entre N y los coeficientes Eqs. (14 y 15) tenemos que
-
+%
+comparando los coeficientes de $e^{-iwt}$ y $e^{iwt}$ y usando las relaciones de conmutación entre N y los coeficientes Eqs. (14 y 15) tenemos que
+%
 \begin{equation}
  -iwa_{\mathbf{k}} |E\rangle = i[H,a_{\mathbf{k}}] |E\rangle  =i(H-E)a_{\mathbf{k}} |E\rangle\,,
 \end{equation}
-
+%
 \begin{equation}
  iwc_{\mathbf{k}} |E\rangle = i[H,c_{\mathbf{k}}] |E\rangle  =i(H-E)c_{\mathbf{k}} |E\rangle\,,
 \end{equation}
-
-De donde obtenemos
-
+%
+de donde obtenemos
+%
 \begin{equation}
  Ha_{\mathbf{k}} |E\rangle =(E-w)a_{\mathbf{k}} |E\rangle\,,
 \end{equation}
 
 \begin{equation}
- Hc_{\mathbf{k}} |E\rangle =(E+w)c_{\mathbf{k}} |E\rangle\,,
+ Hc_{\mathbf{k}} |E\rangle =(E+w)c_{\mathbf{k}} |E\rangle\,.
 \end{equation}
 
 Vemos que el operador $a_{\mathbf{k}}$ (coeficiente de ondas con frecuencia positiva) reduce el numero de partículas en $1$ y también reduce la energía del estado $|E\rangle$ en $w$, por lo que efectivamente es un operador de aniquilación. Pero  $c_{\mathbf{k}}$ (coeficiente de ondas con frecuencia negativa) incrementa la energía del estado en $w$, entonces este debe crear una partícula y debe ser considerado como un operador de creación. Por esto redefinimos
 $c_{\mathbf{-k}} \rightarrow b_{\mathbf{k}}^\dagger\,, \  c_{\mathbf{-k}}^\dagger \rightarrow b_{\mathbf{k}}$ con sus respectivas relaciones de conmutación 
-
+%
 \begin{equation}
   [b_{\mathbf{k}},b_{{\mathbf{k}}'}^\dagger] = \delta_{\mathbf{kk'}}\,, \ \  [b_{\mathbf{k}},b_{{\mathbf{k}}'}] = [b_{\mathbf{k}}^\dagger,b_{{\mathbf{k}}'}^\dagger] = 0\,,
 \end{equation}
-
-Y los conmutadores de $b_{\mathbf{k}}$ con $a_{\mathbf{k}}$ también son cero. La razón para tomar $\mathbf{-k}$ es hacer el segundo termino en el momentum $\mathbf{P}$ positivo (lo cual se verifica al reemplazar la redefinición del campo Eq. (22), donde se cambia $c_\mathbf{k}$ por $c_\mathbf{-k}$ = $b_\mathbf{k}^\dagger$, en la ecuación de momentum Eq. (3), el resultado es que en lugar de $-c_\mathbf{k}^\dagger c_\mathbf{k}$ queda $b_\mathbf{k}^\dagger b_\mathbf{k}$ ) de manera que la partícula tenga tanto momentum positivo como energía positiva. Con esto se redefine el campo como
+y los conmutadores de $b_{\mathbf{k}}$ con $a_{\mathbf{k}}$ también son cero. La razón para tomar $\mathbf{-k}$ es hacer el segundo termino en el momentum $\mathbf{P}$ positivo (lo cual se verifica al reemplazar la redefinición del campo Eq. (22), donde se cambia $c_\mathbf{k}$ por $c_\mathbf{-k}$ = $b_\mathbf{k}^\dagger$, en la ecuación de momentum Eq. (3), el resultado es que en lugar de $-c_\mathbf{k}^\dagger c_\mathbf{k}$ queda $b_\mathbf{k}^\dagger b_\mathbf{k}$ ) de manera que la partícula tenga tanto momentum positivo como energía positiva. Con esto se redefine el campo como
 
 \begin{equation}
-  \phi(x) = \sum_{\mathbf{k}} \frac{1}{\sqrt{2wV}} (a_{\mathbf{k}}e^{-iwt}+c_{\mathbf{k}}e^{iwt}) e^{i\mathbf{k} \cdot \mathbf{x}} = \sum_{\mathbf{k}} \frac{1}{\sqrt{2wV}} (a_{\mathbf{k}}e^{-iwt+i\mathbf{k} \cdot \mathbf{x}}+b_{\mathbf{k}}^\dagger e^{iwt-i\mathbf{k} \cdot \mathbf{x}})
+  \phi(x) = \sum_{\mathbf{k}} \frac{1}{\sqrt{2wV}} (a_{\mathbf{k}}e^{-iwt}+c_{\mathbf{k}}e^{iwt}) e^{i\mathbf{k} \cdot \mathbf{x}} = \sum_{\mathbf{k}} \frac{1}{\sqrt{2wV}} (a_{\mathbf{k}}e^{-iwt+i\mathbf{k} \cdot \mathbf{x}}+b_{\mathbf{k}}^\dagger e^{iwt-i\mathbf{k} \cdot \mathbf{x}}).
 \end{equation}
 
 También los operadores Hamiltoniano, momentum y carga, en términos de los nuevos operadores de creación y aniquilación, son reescritos como
-
+%
 \begin{equation}
   H = \sum_{\mathbf{k}} w[a_{\mathbf{k}}^\dagger a_{\mathbf{k}} + b_{\mathbf{k}}^\dagger b_{\mathbf{k}} + 1]\,,
 \end{equation}
@@ -204,8 +201,8 @@ También los operadores Hamiltoniano, momentum y carga, en términos de los nuev
   Q = \sum_{{\mathbf{k}}} q[a_{\mathbf{k}}^\dagger a_{\mathbf{k}} - b_{\mathbf{k}}^\dagger b_{\mathbf{k}} - 1]\,,
 \end{equation}
 
-Estas expresiones nos dicen que b es un operador de aniquilación  de una partícula que tiene energía-momentum $(w,\mathbf{k})$ pero con carga opuesta, que llamaremos antipartícula, por lo que este nuevo estado de la materia también tiene energía positiva. Feynman interpretó estas partículas con energía negativa moviéndose hacia atrás en el tiempo como antipartículas con energía positiva moviéndose hacia adelante en el tiempo \cite{Kaku:1993}.
-Con estas cuatro ultimas ecuaciones y las relaciones de conmutación de los coeficientes (operadores creación y aniquilación) se puede probar directamente
+Estas expresiones nos dicen que $b$ es un operador de aniquilación  de una partícula que tiene energía-momentum $(w,\mathbf{k})$ pero con carga opuesta, que llamaremos antipartícula, por lo que este nuevo estado de la materia también tiene energía positiva. Feynman interpretó estas partículas con energía negativa moviéndose hacia atrás en el tiempo como antipartículas con energía positiva moviéndose hacia adelante en el tiempo \cite{Kaku:1993}.
+Con estas cuatro últimas ecuaciones y las relaciones de conmutación de los coeficientes (operadores creación y aniquilación) se puede probar directamente
 
 \begin{equation}
   [\phi(x),\pi(y)]_{t_x=t_y} = i \delta^3(\mathbf{x}-\mathbf{y})\,,
@@ -223,7 +220,7 @@ Con
 \end{equation}
 
 \section{Discusión}
-La segunda cuantización se puede interpretar como la cuantización de los diferentes modos de vibración con momentum k en los que se puede descomponer el campo, esto lleva a estados cuánticos discretos para el campo, donde estos estados no representan a una partícula, si no un numero arbitrario de partículas con su respectivo momentum, es decir un solo estado del campo esta asociado a varias partículas, es un estado antipartículas y son estos estados los que son discretizados en la cuantización \cite{Kaku:1993}.
+La segunda cuantización se puede interpretar como la cuantización de los diferentes modos de vibración con momentum $k$ en los que se puede descomponer el campo, esto lleva a estados cuánticos discretos para el campo, donde estos estados no representan a una partícula, si no un numero arbitrario de partículas con su respectivo momentum, es decir un solo estado del campo esta asociado a varias partículas, es un estado antipartículas y son estos estados los que son discretizados en la cuantización \cite{Kaku:1993}.
 
 Otra interpretación de esta teoría es que hay infinitos escenarios simultáneos del campo y de sus excitaciones interactuando  y es la superposición de todos estos (cada escenario con su respectivo "pesos")  la que se manifiesta físicamente \cite{Roussel:2020}.
 
